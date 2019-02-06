@@ -21,6 +21,7 @@ export const reducer = (state = initialState, action) => {
       return { ...state, loading: false, friends: action.payload, error: ''};
     case FAILURE: 
       return { ...state, loading: false, friends: [], error: action.payload};
+
     default: 
       return state;
   }
