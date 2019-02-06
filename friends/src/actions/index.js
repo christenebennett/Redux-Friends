@@ -10,10 +10,10 @@ export function fetchData() {
     axios
       .get('http://localhost:5000/api/friends')
       .then(response => {
-        console.log(response.friends)
+        console.log(response.data)
         dispatch({
           type: SUCCESS,
-          payload: response.friends
+          payload: response.data
         })
       })
       .catch(err => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchData } from '../actions';
+import FriendCard from './FriendCard';
 
 class FriendsList extends React.Component {
   constructor(props){
@@ -16,11 +17,21 @@ class FriendsList extends React.Component {
     if (this.props.loading){
       return <h2>LOADING FRIENDS....</h2>
     }
-    return(
-      <div>
-        {this.props.friends.map(friend => {
-          return <div>{friend}</div>;
-        })}
+    return (
+      <div className="friends-list">
+        <h2>My Friends:</h2>
+        <div className="friends-list-friends">
+          {this.props.friends.map(friend => {
+            return (
+              <FriendCard 
+                key={friend.id} 
+                name={friend.name}
+                age={friend.age}
+                email={friend.email} />
+            )
+          })}
+        </div>
+        
       </div>
       
 
