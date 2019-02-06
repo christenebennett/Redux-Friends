@@ -3,7 +3,14 @@ import { LOADING, SUCCESS, FAILURE } from '../actions';
 const initialState = {
   friends: [],
   error: '',
-  loading: false
+  loading: false,
+  friendsFetched: false,
+  friendsSaved: false,
+  savingFriends: false,
+  updatingFriend: false,
+  friendUpdated: false,
+  deletingFriend: false,
+  friendDeleted: false
 }
 
 export const reducer = (state = initialState, action) => {
