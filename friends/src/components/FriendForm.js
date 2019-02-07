@@ -11,7 +11,6 @@ class FriendForm extends React.Component {
         age: null,
         email: ''
       }
-      
     }
   }
 
@@ -26,7 +25,6 @@ class FriendForm extends React.Component {
 
   addNewFriend = event => {
     event.preventDefault();
-    // console.log(this.state.friend)
     this.props.addFriend(this.state.friend);
   }
 

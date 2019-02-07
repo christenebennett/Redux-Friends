@@ -25,6 +25,7 @@ class FriendsList extends React.Component {
             return (
               <FriendCard 
                 key={friend.id} 
+                id={friend.id}
                 name={friend.name}
                 age={friend.age}
                 email={friend.email} />
