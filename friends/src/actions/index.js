@@ -1,10 +1,9 @@
 import axios from "axios";
-import { Action } from "rxjs/internal/scheduler/Action";
 
 export const SUCCESS = 'SUCCESS';
 export const LOADING = 'LOADING';
 export const FAILURE = 'FAILURE';
-export const ADD = 'ADD';
+export const ADD_FRIEND = 'ADD_FRIEND';
 
 export function fetchData() {
   return dispatch => {
@@ -35,7 +34,7 @@ export function addFriend(friend) {
       .then(response => {
         console.log(response.data)
         dispatch({
-          type: ADD,
+          type: ADD_FRIEND,
           payload: response.data
         })
       })

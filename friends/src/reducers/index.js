@@ -1,4 +1,4 @@
-import { LOADING, SUCCESS, FAILURE } from '../actions';
+import { LOADING, SUCCESS, FAILURE, ADD_FRIEND } from '../actions';
 
 const initialState = {
   friends: [],
@@ -21,7 +21,9 @@ export const reducer = (state = initialState, action) => {
       return { ...state, loading: false, friends: action.payload, error: ''};
     case FAILURE: 
       return { ...state, loading: false, friends: [], error: action.payload};
-
+    case ADD_FRIEND: 
+      return {...state, loading: false, friends: action.payload, error: ''};
+    
     default: 
       return state;
   }
