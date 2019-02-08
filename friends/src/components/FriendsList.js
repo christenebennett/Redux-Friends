@@ -4,9 +4,6 @@ import { fetchData } from '../actions';
 import FriendCard from './FriendCard';
 
 class FriendsList extends React.Component {
-  constructor(props){
-    super(props);
-  }
 
   componentDidMount() {
     // call function fetch data
@@ -18,6 +15,7 @@ class FriendsList extends React.Component {
       return <h2>LOADING FRIENDS....</h2>
     }
     return (
+
       <div className="friends-list">
         <h2>My Friends:</h2>
         <div className="friends-list-friends">
@@ -29,14 +27,12 @@ class FriendsList extends React.Component {
                 name={friend.name}
                 age={friend.age}
                 email={friend.email} />
-              
             )
           })}
         </div>
         
       </div>
-      
-
+    
     )
   }
 }

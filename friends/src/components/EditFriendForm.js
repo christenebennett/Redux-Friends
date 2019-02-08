@@ -36,7 +36,7 @@ class EditFriendForm extends React.Component {
           <input type="text" defaultValue={this.props.name} name="name" placeholder="name" onChange={this.onInputChange}/>
           <input type="number" defaultValue={this.props.age} name="age" min="13" max="100" placeholder="age" onChange={this.onInputChange}/>
           <input type="email" defaultValue={this.props.email} name="email" placeholder="email" onChange={this.onInputChange}/>
-          <button type="submit">Edit Friend</button>
+          <button type="submit">Save Changes</button>
         </form>
       </div>
     )
