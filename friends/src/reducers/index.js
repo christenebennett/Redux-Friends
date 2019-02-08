@@ -3,14 +3,7 @@ import { LOADING, SUCCESS, FAILURE, ADD_FRIEND, DELETE_FRIEND, EDIT_FRIEND } fro
 const initialState = {
   friends: [],
   error: '',
-  loading: false,
-  friendsFetched: false,
-  friendsSaved: false,
-  savingFriends: false,
-  updatingFriend: false,
-  friendUpdated: false,
-  deletingFriend: false,
-  friendDeleted: false
+  loading: false
 }
 
 export const reducer = (state = initialState, action) => {

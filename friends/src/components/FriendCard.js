@@ -30,32 +30,41 @@ class FriendCard extends React.Component {
   render(){
     if (this.state.editing){
       return (
-        <div className="friend-card">
-        <h4>{this.props.name}</h4>
-        <div>{this.props.age}</div>
-        <div>{this.props.email}</div>
-        <button type="submit" onClick={this.onDeleteFriend}>Delete Friend</button>
-        <button onClick={this.onEditClick}>Edit Friend</button>
-        
+        <div className="friend-card friend-card-edit">
+
+          <div className="friend-card-edit-wrapper">
+            <div className="friend-card-text">
+              <h4>{this.props.name}</h4>
+              <div>{this.props.age}</div>
+              <div>{this.props.email}</div>
+            </div>
+
+            <div className="friend-card-buttons">
+              <button type="submit" onClick={this.onDeleteFriend}>Delete Friend</button>
+              <button onClick={this.onEditClick}>Edit Friend</button>
+            </div>
+          </div>
+
           <EditFriendForm 
           id={this.props.id}
           name={this.props.name}
           age={this.props.age}
           email={this.props.email}/>
-        
       </div>
       )
      
     }
     return (
       <div className="friend-card">
-        <h4>{this.props.name}</h4>
-        <div>{this.props.age}</div>
-        <div>{this.props.email}</div>
-        <button type="submit" onClick={this.onDeleteFriend}>Delete Friend</button>
-        <button onClick={this.onEditClick}>Edit Friend</button>
-      
-        
+        <div className="friend-card-text">
+          <h4>{this.props.name}</h4>
+          <div>{this.props.age}</div>
+          <div>{this.props.email}</div>
+        </div>
+        <div className="friend-card-buttons">
+          <button type="submit" onClick={this.onDeleteFriend}>Delete Friend</button>
+          <button onClick={this.onEditClick}>Edit Friend</button>
+        </div>
       </div>
     )
   }
