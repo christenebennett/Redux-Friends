@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+button {
+  border: 1px solid #86A8E7;
+  background: #86A8E7;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: all .3s ease-out;
+}
+
+button:hover {
+  background: #ffffff;
+}
+
+.friends-list-friends {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.friend-card {
+  border: 1px solid black;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: rgba(50, 50, 50, 1);
+  color: #ffffff;
+  transition: all .3s ease-out;
+  display: flex;
+  justify-content: space-between;
+}
+
+.friend-card h4 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.friend-card-text {
+  text-align: left;
+}
+
+.friend-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.friend-card-edit {
+  flex-direction: column;
+}
+
+.friend-card-edit-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
