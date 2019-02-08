@@ -29,6 +29,7 @@ class FriendsList extends React.Component {
                 name={friend.name}
                 age={friend.age}
                 email={friend.email} />
+              
             )
           })}
         </div>

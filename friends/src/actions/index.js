@@ -5,6 +5,7 @@ export const LOADING = 'LOADING';
 export const FAILURE = 'FAILURE';
 export const ADD_FRIEND = 'ADD_FRIEND';
 export const DELETE_FRIEND = 'DELETE_FRIEND';
+export const EDIT_FRIEND = 'EDIT_FRIEND';
 
 export function fetchData() {
   return dispatch => {
@@ -60,6 +61,25 @@ export function deleteFriend(id) {
         dispatch({
           type: FAILURE,
           payload: "failed to delete friend"
+        })
+      })
+  }
+}
+
+export function editFriend(friend, id) {
+  return dispatch => {
+    axios
+      .put(`http://localhost:5000/api/friends/${id}`, friend)
+      .then(response => {
+        dispatch({
+          type: EDIT_FRIEND,
+          payload: response.data
+        })
+      })
+      .catch(err => {
+        dispatch({
+          type: FAILURE,
+          payload: "failed to edit friend"
         })
       })
   }

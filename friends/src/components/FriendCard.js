@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { deleteFriend } from '../actions'
+import EditFriendForm from './EditFriendForm';
 
 
 class FriendCard extends React.Component {
@@ -20,6 +21,11 @@ class FriendCard extends React.Component {
         <div>{this.props.age}</div>
         <div>{this.props.email}</div>
         <button type="submit" onClick={this.onDeleteFriend}>Delete Friend</button>
+        <EditFriendForm 
+          id={this.props.id}
+          name={this.props.name}
+          age={this.props.age}
+          email={this.props.email}/>
       </div>
     )
   }
